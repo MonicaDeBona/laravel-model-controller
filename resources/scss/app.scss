@@ -1,1 +1,43 @@
-@import '~bootstrap/scss/bootstrap'
+@use './variables.scss' as *;
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $main-bg-color;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    .main-logo {
+        width: 200px;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    li {
+        color: white;
+        height: 100%;
+        border-left: 2px solid white;
+        padding-left: 1rem;
+        margin-right: 1.5rem;
+
+        &:hover {
+            color: $main-accent-color;
+        }
+    }
+
+    .jumbo {
+        background-image: url('../assets/img/jumbo.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 800px;
+        background-position: top;
+    }
+}
